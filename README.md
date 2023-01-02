@@ -1,0 +1,2 @@
+# deebs
+Database viewer TUI

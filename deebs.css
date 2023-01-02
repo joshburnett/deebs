@@ -1,0 +1,30 @@
+Screen {
+    background: $surface-darken-1;
+}
+
+#tree-view {
+    scrollbar-gutter: stable;
+    overflow: auto;
+    width: auto;
+    height: 100%;
+    dock: left;
+    background: gray;
+}
+
+#tree-view TreeNode:hover {
+    text-style: bold;
+    background: green;
+}
+
+DatabaseBrowser.-show-tree #tree-view {
+    display: block;
+    max-width: 50%;
+}
+
+#data-view {
+    overflow: auto scroll;
+    min-width: 100%;
+}
+#datatable {
+    width: auto;
+}

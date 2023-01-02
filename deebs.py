@@ -62,10 +62,6 @@ class DatabaseBrowser(App):
 
     engine = create_engine(f'sqlite:///sample databases/chinook.db')
 
-    # def watch_show_tree(self, show_tree: bool) -> None:
-    #     """Called when show_tree is modified."""
-    #     self.set_class(show_tree, "-show-tree")
-
     def compose(self) -> ComposeResult:
         """Compose our UI."""
 
@@ -95,10 +91,8 @@ class DatabaseBrowser(App):
             datatable.clear(columns=True)
             datatable.add_columns(*[col.name for col in dbtable.columns])
 
-            q = dbtable.select().limit(5)
-
             with self.engine.connect() as conn:
-                for row in conn.execute(q):
+                for row in conn.execute(dbtable.select().limit(100)):
                     datatable.add_row(*map(str, row))
 
 

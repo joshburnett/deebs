@@ -130,3 +130,7 @@ dmypy.json
 
 # PyCharm
 .idea/
+/explore_db.py
+/requirements.txt
+/sample_databases/
+/samples/

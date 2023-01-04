@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "deebs"
+authors = [{name = "Josh Burnett", email = "josh@burnettsonline.org"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "textual",
+    "SQLAlchemy",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Home = "https://github.com/joshburnett/deebs"
+
+[project.scripts]
+deebs = "deebs:main"
+
+[tool.flit.module]
+name = "deebs"

@@ -96,5 +96,10 @@ class DatabaseBrowser(App):
                     datatable.add_row(*map(str, row))
 
 
-if __name__ == "__main__":
+# Entry point for script when installed via pip/pipx
+def main():
     DatabaseBrowser().run()
+
+
+if __name__ == "__main__":
+    main()
